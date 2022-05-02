@@ -22,7 +22,7 @@ router.route("/author").post( async (req, res) => {
     //Söker efter författaren av boken
     let result = await db.all(
         `SELECT name FROM books, authors, authors_books 
-        WHERE books.title = "${search_value}" 
+        WHERE books.title LIKE "%${search_value}%" 
         AND books.id = authors_books.book_id 
         AND authors.id = authors_books.author_id`
     )
@@ -40,7 +40,7 @@ router.route("/book").post( async (req, res) => {
     //Söker vilka böcker författaren skrivit
     let result = await db.all(
         `SELECT title FROM books, authors, authors_books 
-        WHERE authors.name = "${search_value}" 
+        WHERE authors.name LIKE "%${search_value}%" 
         AND books.id = authors_books.book_id 
         AND authors.id = authors_books.author_id`
     )
@@ -58,7 +58,7 @@ router.route("/genre").post( async (req, res) => {
     //Söker efter vilka genres boken
     let result = await db.all(
         `SELECT name FROM books, genres, books_genres 
-        WHERE books.title = "${search_value}" 
+        WHERE books.title LIKE "%${search_value}%" 
         AND books.id = books_genres.book_id 
         AND genres.id=books_genres.genre_id`
     )
