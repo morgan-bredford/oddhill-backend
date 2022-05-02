@@ -77,10 +77,10 @@ function App() {
               Find the genre of a book
             </button>
           </form>
-          <form className="search_form" onSubmit={(e) => prepareQuery(e,'/','books','id',`= "${e.target[0].value}"`)}>
+          <form className="search_form" onSubmit={(e) => prepareQuery(e,'/','books','isbn',`= "${e.target[0].value}"`)}>
             <input type='text'/>
             <button  className="btn">
-              Find book by id
+              Find book by ISBN
             </button>
           </form>
           <form className="search_form" onSubmit={(e) => prepareQuery(e,'/','authors','id',`= "${e.target[0].value}"`)}>
