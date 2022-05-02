@@ -51,7 +51,7 @@ function Admin() {
     return (
         <>
             {/* Från formuläret skickas: hela formuläret, sökvägen till serverns rest api, vilken tabell kommandot ska utföras på, hur många värden som skickas med */}
-            <form className="register_form" onSubmit={(e) => prepareAdminCommand(e,'/add','books',3)}>
+            <form className="admin_form" onSubmit={(e) => prepareAdminCommand(e,'/add','books',3)}>
                 <h3>Add a book</h3>
                 <input type='text' name='title'/>&nbsp;title<br />
                 <input type='text' name='isbn'/>&nbsp;isbn<br />
@@ -61,7 +61,7 @@ function Admin() {
                     Add a book
                 </button>
             </form>
-            <form className="register_form" onSubmit={(e) => prepareAdminCommand(e,'/add','authors',2)}>
+            <form className="admin_form" onSubmit={(e) => prepareAdminCommand(e,'/add','authors',2)}>
                 <h3>Add an author</h3>
                 <input type='text' name='name'/>&nbsp;name<br />
                 <textarea name='biography'></textarea>&nbsp;biography<br />
@@ -70,7 +70,7 @@ function Admin() {
                     Add an author
                 </button>
             </form>
-            <form className="register_form" onSubmit={(e) => prepareAdminCommand(e,'/delete','books',1)}>
+            <form className="admin_form" onSubmit={(e) => prepareAdminCommand(e,'/delete','books',1)}>
                 <h3>Delete a book by id</h3>
                 id:<input type='text' name='id' className='input_id'/>
                 &nbsp;&nbsp;password:<input type='text'/>
@@ -78,7 +78,7 @@ function Admin() {
                     Delete
                 </button>
             </form>
-            <form className="register_form" onSubmit={(e) => prepareAdminCommand(e,'/delete','authors',1)}>
+            <form className="admin_form" onSubmit={(e) => prepareAdminCommand(e,'/delete','authors',1)}>
                 <h3>Delete an author by id</h3>
                 id:<input type='text' name='id' className='input_id'/>
                 &nbsp;&nbsp;password:<input type='text'/>

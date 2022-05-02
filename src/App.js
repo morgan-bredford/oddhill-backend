@@ -44,17 +44,17 @@ function App() {
       <section className="sidebar_container">
         <section className="search_container">
           {/* Från formulären skickas: hela formuläret, sökvägen till serverns rest api, tabellen för sökningen, kolumnen för sökningen, sökparameter som används i SQL */}
-          <form className="search_form top_margin" onSubmit={(e) => prepareQuery(e,'/','books','id','> 0')}>
+          <form className="form top_margin" onSubmit={(e) => prepareQuery(e,'/','books','id','> 0')}>
             <button  className="btn btn_big">
               List all books
             </button>
           </form>
-          <form className="search_form" onSubmit={(e) => prepareQuery(e,'/','authors','id','> 0')}>
+          <form className="form" onSubmit={(e) => prepareQuery(e,'/','authors','id','> 0')}>
             <button  className="btn btn_big">
               List all authors
             </button>
           </form>
-          <form className="search_form" onSubmit={(e) => prepareQuery(e,'/','genres','id','> 0')}>
+          <form className="form" onSubmit={(e) => prepareQuery(e,'/','genres','id','> 0')}>
             <button  className="btn btn_big">
               List all genres
             </button>
