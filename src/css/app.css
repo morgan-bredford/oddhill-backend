@@ -96,6 +96,7 @@ input[type=text], textarea {
     border: none;
     border-radius: 3px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
     transition: .3s;
 }
 
